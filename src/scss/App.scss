@@ -6,7 +6,9 @@
 @import "layout/heading";
 @import "layout/content";
 @import "layout/grid";
+@import "layout/griditem";
 
 .App {
 	font-family: "BenchNine", sans-serif;
+	cursor: default;
 }

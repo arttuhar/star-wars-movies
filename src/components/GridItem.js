@@ -3,6 +3,8 @@ import axios from 'axios';
 
 function GridItem() {
 
+    const imdbUrl = 'https://www.imdb.com/title/';
+
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -21,11 +23,14 @@ function GridItem() {
         return (
             <div key={idx} className='gridCard'>
                 <div className='posterContainer'>
-                    <img className='poster' src={movie.Poster} alt='Movie poster' />
+                    <a className='imdbLink' href={imdbUrl + movie.imdbID} target='_blank' rel='noreferrer'>
+                        <img className='poster' src={movie.Poster} alt='Movie poster' />
+                    </a>
+                    
                 </div>
                 <div className='movieDetails'>
-                    <h4>{movie.Year}</h4>
-                    <h4>{movie.Title}</h4>
+                    <h3 className='movieYear'>{movie.Year}</h3>
+                    <h3 className='movieTitle'>{movie.Title}</h3>
                 </div>
             </div>
         )

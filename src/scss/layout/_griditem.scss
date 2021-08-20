@@ -1,0 +1,39 @@
+.gridItem {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: center;
+
+	.gridCard {
+		text-align: center;
+		padding: 0 10px;
+		margin: 20px 0;
+
+		.posterContainer {
+			.imdbLink {
+				color: #111;
+				cursor: pointer;
+
+				.poster {
+					height: 320px;
+					width: 100%;
+				}
+			}
+		}
+
+		.movieDetails {
+			height: 100px;
+			padding: 10px;
+
+			.movieYear {
+				color: #888;
+				font-size: 1.1em;
+				font-weight: 300;
+			}
+
+			.movieTitle {
+				color: #111;
+				font-size: 1.3em;
+			}
+		}
+	}
+}

@@ -41,9 +41,53 @@
 
 .gridContainer {
   max-width: 992px;
+  margin: 20px 0;
+}
+
+.gridItem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridItem .gridCard {
+  text-align: center;
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+.gridItem .gridCard .posterContainer .imdbLink {
+  color: #111;
+  cursor: pointer;
+}
+
+.gridItem .gridCard .posterContainer .imdbLink .poster {
+  height: 320px;
+  width: 100%;
+}
+
+.gridItem .gridCard .movieDetails {
+  height: 100px;
+  padding: 10px;
+}
+
+.gridItem .gridCard .movieDetails .movieYear {
+  color: #888;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.gridItem .gridCard .movieDetails .movieTitle {
+  color: #111;
+  font-size: 1.3em;
 }
 
 .App {
   font-family: "BenchNine", sans-serif;
+  cursor: default;
 }
 /*# sourceMappingURL=App.css.map */
