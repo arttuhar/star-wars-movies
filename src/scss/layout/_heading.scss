@@ -1,0 +1,18 @@
+.headingContainer {
+	background: url("https://frantic.s3-eu-west-1.amazonaws.com/star-wars-header.jpg")
+		50% no-repeat;
+	background-size: cover;
+	height: 70vh;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.headingText {
+		color: #fafafa;
+		text-shadow: 1px 1px 2px #222;
+		font-size: 3em;
+		text-transform: uppercase;
+		padding: 1em;
+	}
+}
