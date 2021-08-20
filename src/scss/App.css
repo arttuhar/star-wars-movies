@@ -30,6 +30,19 @@
   padding: 1em;
 }
 
+.contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridContainer {
+  max-width: 992px;
+}
+
 .App {
   font-family: "BenchNine", sans-serif;
 }

@@ -2,7 +2,10 @@
 
 @import "base/root";
 
+// Import component layouts
 @import "layout/heading";
+@import "layout/content";
+@import "layout/grid";
 
 .App {
 	font-family: "BenchNine", sans-serif;
