@@ -6,7 +6,7 @@
           box-sizing: border-box;
 }
 
-.headingContainer {
+.heading {
   background: url("https://frantic.s3-eu-west-1.amazonaws.com/star-wars-header.jpg") 50% no-repeat;
   background-size: cover;
   height: 70vh;
@@ -22,7 +22,7 @@
           justify-content: center;
 }
 
-.headingContainer .headingText {
+.heading .headingText {
   color: #fafafa;
   text-shadow: 1px 1px 2px #222;
   font-size: 3em;
@@ -91,17 +91,17 @@
 }
 
 .pagination .paginationContainer {
-  height: 40px;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  list-style: none;
   margin: 40px 0;
 }
 
@@ -111,8 +111,6 @@
   display: -ms-flexbox;
   display: flex;
   width: 140px;
-  font-size: 1.2em;
-  background-color: #222;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -120,14 +118,16 @@
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
+  font-size: 1.2em;
+  background-color: #222;
   padding: 5px;
+  cursor: pointer;
 }
 
 .pagination .next .paginationNext,
 .pagination .next .paginationPrevious,
 .pagination .previous .paginationNext,
 .pagination .previous .paginationPrevious {
-  cursor: pointer;
   outline: none;
 }
 
