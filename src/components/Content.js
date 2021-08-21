@@ -1,11 +1,10 @@
 import React from 'react'
-
 import Grid from './Grid'
 
-function Content() {
+function Content(props) {
     return (
         <div className='contentContainer'>
-            <Grid />
+            <Grid showResults={props.showResults}/>
         </div>
     )
 }
