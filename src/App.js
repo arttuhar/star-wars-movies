@@ -3,7 +3,7 @@ import './scss/App.scss';
 import axios from 'axios';
 
 import Heading from './components/Heading';
-import Content from './components/Content';
+import Container from './components/Container';
 
 function App() {
 
@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <Heading />
-      <Content
+      <Container
         showResults={showResults}
         pageCount={pageCount}
         pageChange={pageChange}

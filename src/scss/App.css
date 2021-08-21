@@ -30,7 +30,7 @@
   padding: 1em;
 }
 
-.contentContainer {
+.container .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,9 +39,13 @@
           justify-content: center;
 }
 
-.gridContainer {
+.container .content .contentContainer {
   max-width: 992px;
-  margin: 20px 0;
+  margin: 20px 40px;
+}
+
+.container .content .contentContainer .paginationLinks {
+  padding: 0 10px;
 }
 
 .gridItem {
@@ -84,6 +88,58 @@
 .gridItem .gridCard .movieDetails .movieTitle {
   color: #111;
   font-size: 1.3em;
+}
+
+.pagination .paginationContainer {
+  height: 40px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0;
+}
+
+.pagination .next,
+.pagination .previous {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  font-size: 1.2em;
+  background-color: #222;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fafafa;
+  padding: 5px;
+}
+
+.pagination .next .paginationNext,
+.pagination .next .paginationPrevious,
+.pagination .previous .paginationNext,
+.pagination .previous .paginationPrevious {
+  cursor: pointer;
+  outline: none;
+}
+
+.pagination .next :hover,
+.pagination .previous :hover {
+  color: #eee;
+}
+
+.pagination .paginationPrevious a,
+.pagination .paginationActive a {
+  outline: none;
+  font-size: 2em;
 }
 
 .App {

@@ -1,0 +1,15 @@
+.container {
+	.content {
+		display: flex;
+		justify-content: center;
+
+		.contentContainer {
+			max-width: 992px;
+			margin: 20px 40px;
+
+			.paginationLinks {
+				padding: 0 10px;
+			}
+		}
+	}
+}

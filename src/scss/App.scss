@@ -4,9 +4,9 @@
 
 // Import component layouts
 @import "layout/heading";
-@import "layout/content";
-@import "layout/grid";
+@import "layout/container";
 @import "layout/griditem";
+@import "layout/pagination";
 
 .App {
 	font-family: "BenchNine", sans-serif;

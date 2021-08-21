@@ -1,0 +1,40 @@
+.pagination {
+	.paginationContainer {
+		height: 40px;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 40px 0;
+	}
+
+	.next,
+	.previous {
+		display: flex;
+		width: 140px;
+		font-size: 1.2em;
+		background-color: #222;
+		justify-content: center;
+		align-items: center;
+		color: #fafafa;
+		padding: 5px;
+
+		.paginationNext,
+		.paginationPrevious {
+			cursor: pointer;
+			outline: none;
+		}
+
+		:hover {
+			color: #eee;
+		}
+	}
+
+	.paginationPrevious,
+	.paginationActive {
+		a {
+			outline: none;
+			font-size: 2em;
+		}
+	}
+}
