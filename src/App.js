@@ -10,6 +10,7 @@ function App() {
   const imdbUrl = 'https://www.imdb.com/title/';
 
   const [movies, setMovies] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
 
   useEffect(() => {
       axios.get(`https://frantic.s3-eu-west-1.amazonaws.com/films.json`)
@@ -23,7 +24,12 @@ function App() {
           })
   }, []);
 
-  const showResults = movies.map((movie, idx) => {
+  const resultsPerPage = 8;
+  const pagesVisited = pageNumber * resultsPerPage;
+
+  const showResults = movies
+    .slice(pagesVisited, pagesVisited + resultsPerPage)
+    .map((movie, idx) => {
       return (
           <div key={idx} className='gridCard'>
               <div className='posterContainer'>
@@ -37,12 +43,22 @@ function App() {
               </div>
           </div>
       )
-  })
+    })
+  
+  const pageCount = Math.ceil(movies.length / resultsPerPage);
+
+  const pageChange = ({selected}) => {
+    setPageNumber(selected);
+  }
 
   return (
     <div className="App">
       <Heading />
-      <Content showResults={showResults} />
+      <Content
+        showResults={showResults}
+        pageCount={pageCount}
+        pageChange={pageChange}
+      />
     </div>
   );
 }
