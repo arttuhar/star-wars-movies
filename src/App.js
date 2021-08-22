@@ -5,6 +5,9 @@ import axios from "axios";
 import Heading from "./components/Heading";
 import Container from "./components/Container";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+
 function App() {
 	const imdbUrl = "https://www.imdb.com/title/";
 
@@ -12,6 +15,9 @@ function App() {
 	const [pageNumber, setPageNumber] = useState(0);
 	const [sortByTitle, setSortByTitle] = useState("");
 	const [sortByYear, setSortByYear] = useState("");
+
+	const [sortTitleIcon, setSortTitleIcon] = useState("");
+	const [sortYearIcon, setSortYearIcon] = useState("");
 
 	useEffect(() => {
 		axios
@@ -33,12 +39,15 @@ function App() {
 		if (e.target.value === "") {
 			setSortByTitle("az");
 			setSortByYear("");
+			setSortTitleIcon(<FontAwesomeIcon icon={faCaretUp} />);
 		} else if (e.target.value === "az") {
 			setSortByTitle("za");
 			setSortByYear("");
+			setSortTitleIcon(<FontAwesomeIcon icon={faCaretDown} />);
 		} else if (e.target.value === "za") {
 			setSortByTitle("");
 			setSortByYear("");
+			setSortTitleIcon("");
 		}
 		console.log(e.target.value);
 	};
@@ -47,12 +56,15 @@ function App() {
 		if (e.target.value === "") {
 			setSortByYear("newest");
 			setSortByTitle("");
+			setSortYearIcon(<FontAwesomeIcon icon={faCaretUp} />);
 		} else if (e.target.value === "newest") {
 			setSortByYear("oldest");
 			setSortByTitle("");
+			setSortYearIcon(<FontAwesomeIcon icon={faCaretDown} />);
 		} else if (e.target.value === "oldest") {
 			setSortByYear("");
 			setSortByTitle("");
+			setSortYearIcon("");
 		}
 		console.log(e.target.value);
 	};
@@ -121,6 +133,8 @@ function App() {
 				sortByTitleHandler={sortByTitleHandler}
 				sortByYear={sortByYear}
 				sortByYearHandler={sortByYearHandler}
+				sortTitleIcon={sortTitleIcon}
+				sortYearIcon={sortYearIcon}
 			/>
 		</div>
 	);
