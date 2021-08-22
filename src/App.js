@@ -10,6 +10,7 @@ function App() {
 
 	const [movies, setMovies] = useState([]);
 	const [pageNumber, setPageNumber] = useState(0);
+	const [sortByTitle, setSortByTitle] = useState("");
 	const [sortByYear, setSortByYear] = useState("");
 
 	useEffect(() => {
@@ -28,13 +29,30 @@ function App() {
 	const resultsPerPage = 8;
 	const pagesVisited = pageNumber * resultsPerPage;
 
+	const sortByTitleHandler = e => {
+		if (e.target.value === "") {
+			setSortByTitle("az");
+			setSortByYear("");
+		} else if (e.target.value === "az") {
+			setSortByTitle("za");
+			setSortByYear("");
+		} else if (e.target.value === "za") {
+			setSortByTitle("");
+			setSortByYear("");
+		}
+		console.log(e.target.value);
+	};
+
 	const sortByYearHandler = e => {
 		if (e.target.value === "") {
 			setSortByYear("newest");
+			setSortByTitle("");
 		} else if (e.target.value === "newest") {
 			setSortByYear("oldest");
+			setSortByTitle("");
 		} else if (e.target.value === "oldest") {
 			setSortByYear("");
+			setSortByTitle("");
 		}
 		console.log(e.target.value);
 	};
@@ -46,6 +64,13 @@ function App() {
 			} else if (sortByYear === "oldest") {
 				return a.Year > b.Year ? 1 : -1;
 			}
+
+			if (sortByTitle === "az") {
+				return a.Title > b.Title;
+			} else if (sortByTitle === "za") {
+				return a.Title < b.Title;
+			}
+
 			return 0;
 		})
 		.slice(pagesVisited, pagesVisited + resultsPerPage)
@@ -92,6 +117,8 @@ function App() {
 				showResults={showResults}
 				pageCount={pageCount}
 				pageChange={pageChange}
+				sortByTitle={sortByTitle}
+				sortByTitleHandler={sortByTitleHandler}
 				sortByYear={sortByYear}
 				sortByYearHandler={sortByYearHandler}
 			/>

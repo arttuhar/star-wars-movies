@@ -11,6 +11,8 @@ function Container(props) {
 					<div className="contentContainer">
 						<div className="sortingButtons">
 							<Sort
+								sortByTitle={props.sortByTitle}
+								sortByTitleHandler={props.sortByTitleHandler}
 								sortByYear={props.sortByYear}
 								sortByYearHandler={props.sortByYearHandler}
 							/>

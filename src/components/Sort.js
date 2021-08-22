@@ -10,7 +10,8 @@ function Sort(props) {
 				<button
 					className="sortButton byTitleButton"
 					type="button"
-					value="value"
+					value={props.sortByTitle}
+					onClick={props.sortByTitleHandler}
 				>
 					Title
 				</button>
