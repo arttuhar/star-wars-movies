@@ -44,8 +44,41 @@
   margin: 20px 40px;
 }
 
+.container .content .contentContainer .sortingButtons {
+  margin-bottom: 1em;
+}
+
 .container .content .contentContainer .paginationLinks {
   padding: 0 10px;
+}
+
+.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.sort .sortHeading h3 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.sort .sortButtons .sortButton {
+  border: none;
+  background-color: transparent;
+  font-family: "BenchNine", sans-serif;
+  color: #111;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 1em;
+  outline: none;
 }
 
 .gridItem {
@@ -145,5 +178,6 @@
 .App {
   font-family: "BenchNine", sans-serif;
   cursor: default;
+  -webkit-font-smoothing: antialiased;
 }
 /*# sourceMappingURL=App.css.map */
