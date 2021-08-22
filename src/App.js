@@ -95,7 +95,7 @@ function App() {
 		console.log(e.target.value);
 	};
 
-	const showResults = movies
+	const showResults = [...movies]
 		.sort((a, b) => {
 			if (sortByYear === "newest") {
 				return a.Year > b.Year ? -1 : 1;
