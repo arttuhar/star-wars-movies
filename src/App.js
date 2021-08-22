@@ -10,6 +10,7 @@ function App() {
 
 	const [movies, setMovies] = useState([]);
 	const [pageNumber, setPageNumber] = useState(0);
+	const [sortByYear, setSortByYear] = useState("");
 
 	useEffect(() => {
 		axios
@@ -27,7 +28,26 @@ function App() {
 	const resultsPerPage = 8;
 	const pagesVisited = pageNumber * resultsPerPage;
 
+	const sortByYearHandler = e => {
+		if (e.target.value === "") {
+			setSortByYear("newest");
+		} else if (e.target.value === "newest") {
+			setSortByYear("oldest");
+		} else if (e.target.value === "oldest") {
+			setSortByYear("");
+		}
+		console.log(e.target.value);
+	};
+
 	const showResults = movies
+		.sort((a, b) => {
+			if (sortByYear === "newest") {
+				return a.Year > b.Year ? -1 : 1;
+			} else if (sortByYear === "oldest") {
+				return a.Year > b.Year ? 1 : -1;
+			}
+			return 0;
+		})
 		.slice(pagesVisited, pagesVisited + resultsPerPage)
 		.map((movie, idx) => {
 			return (
@@ -72,6 +92,8 @@ function App() {
 				showResults={showResults}
 				pageCount={pageCount}
 				pageChange={pageChange}
+				sortByYear={sortByYear}
+				sortByYearHandler={sortByYearHandler}
 			/>
 		</div>
 	);

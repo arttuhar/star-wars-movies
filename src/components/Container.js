@@ -10,7 +10,10 @@ function Container(props) {
 				<div className="content">
 					<div className="contentContainer">
 						<div className="sortingButtons">
-							<Sort />
+							<Sort
+								sortByYear={props.sortByYear}
+								sortByYearHandler={props.sortByYearHandler}
+							/>
 						</div>
 						<div className="resultsGrid">
 							<GridItem showResults={props.showResults} />

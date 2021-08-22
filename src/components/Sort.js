@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sort() {
+function Sort(props) {
 	return (
 		<div className="sort">
 			<div className="sortHeading">
@@ -14,7 +14,12 @@ function Sort() {
 				>
 					Title
 				</button>
-				<button className="sortButton byYearButton" type="button" value="value">
+				<button
+					className="sortButton byYearButton"
+					type="button"
+					value={props.sortByYear}
+					onClick={props.sortByYearHandler}
+				>
 					Year
 				</button>
 			</div>
