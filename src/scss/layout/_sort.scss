@@ -11,7 +11,23 @@
 	}
 
 	.sortButtons {
-		.sortButton {
+		.notActiveTitle,
+		.notActiveYear {
+			border: none;
+			background-color: transparent;
+			font-family: "BenchNine", sans-serif;
+			color: #888;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 1.3em;
+			text-decoration: none;
+			cursor: pointer;
+			margin-left: 1em;
+			outline: none;
+		}
+
+		.activeTitle,
+		.activeYear {
 			border: none;
 			background-color: transparent;
 			font-family: "BenchNine", sans-serif;

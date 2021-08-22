@@ -17,6 +17,8 @@ function Container(props) {
 								sortByYearHandler={props.sortByYearHandler}
 								sortTitleIcon={props.sortTitleIcon}
 								sortYearIcon={props.sortYearIcon}
+								isTitleActive={props.isTitleActive}
+								isYearActive={props.isYearActive}
 							/>
 						</div>
 						<div className="resultsGrid">

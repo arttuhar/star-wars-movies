@@ -8,7 +8,7 @@ function Sort(props) {
 			</div>
 			<div className="sortButtons">
 				<button
-					className="sortButton byTitleButton"
+					className={props.isTitleActive}
 					type="button"
 					value={props.sortByTitle}
 					onClick={props.sortByTitleHandler}
@@ -16,7 +16,7 @@ function Sort(props) {
 					{props.sortTitleIcon} Title
 				</button>
 				<button
-					className="sortButton byYearButton"
+					className={props.isYearActive}
 					type="button"
 					value={props.sortByYear}
 					onClick={props.sortByYearHandler}
