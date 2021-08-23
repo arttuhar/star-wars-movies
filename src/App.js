@@ -44,9 +44,6 @@ function App() {
 			});
 	}, []);
 
-	const resultsPerPage = 8;
-	const pagesVisited = pageNumber * resultsPerPage;
-
 	const sortByTitleHandler = e => {
 		if (e.target.value === "") {
 			setSortByTitle("az");
@@ -95,6 +92,9 @@ function App() {
 		console.log(e.target.value);
 	};
 
+	const resultsPerPage = 8;
+	const pagesVisited = pageNumber * resultsPerPage;
+
 	const showResults = [...movies]
 		.sort((a, b) => {
 			if (sortByTitle === "az") {
@@ -111,6 +111,11 @@ function App() {
 
 			return 0;
 		})
+
+		// Example current page is 2 so pagesVisited equals
+		// 2 * 8 = 16 items
+		// pagesVisited equals 16 and then add resultsPerPage 8
+		// 16 + 8 = 24 items and 24 / 8 = 3 pages
 		.slice(pagesVisited, pagesVisited + resultsPerPage)
 		.map((movie, idx) => {
 			return (
@@ -142,6 +147,11 @@ function App() {
 			);
 		});
 
+	// Determine how many pages exists
+	// If array length is 18 and resultsPerPage is 8
+	// Total pages count is 2.25
+	// Math.ceil rounds page count to 3
+	// page 1 = 8 items, page 2 = 8 items, page 3 = 2 items
 	const pageCount = Math.ceil(movies.length / resultsPerPage);
 
 	const pageChange = ({ selected }) => {
