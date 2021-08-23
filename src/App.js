@@ -51,14 +51,14 @@ function App() {
 		if (e.target.value === "") {
 			setSortByTitle("az");
 			setSortByYear("");
-			setSortTitleIcon(<FontAwesomeIcon icon={faSortUp} />);
+			setSortTitleIcon(<FontAwesomeIcon icon={faSortDown} />);
 			setSortYearIcon(<FontAwesomeIcon icon={faSort} />);
 			setIsTitleActive("activeTitle");
 			setIsYearActive("notActiveYear");
 		} else if (e.target.value === "az") {
 			setSortByTitle("za");
 			setSortByYear("");
-			setSortTitleIcon(<FontAwesomeIcon icon={faSortDown} />);
+			setSortTitleIcon(<FontAwesomeIcon icon={faSortUp} />);
 			setSortYearIcon(<FontAwesomeIcon icon={faSort} />);
 			setIsTitleActive("activeTitle");
 			setIsYearActive("notActiveYear");
@@ -75,14 +75,14 @@ function App() {
 		if (e.target.value === "") {
 			setSortByYear("newest");
 			setSortByTitle("");
-			setSortYearIcon(<FontAwesomeIcon icon={faSortUp} />);
+			setSortYearIcon(<FontAwesomeIcon icon={faSortDown} />);
 			setSortTitleIcon(<FontAwesomeIcon icon={faSort} />);
 			setIsYearActive("activeYear");
 			setIsTitleActive("notActiveTitle");
 		} else if (e.target.value === "newest") {
 			setSortByYear("oldest");
 			setSortByTitle("");
-			setSortYearIcon(<FontAwesomeIcon icon={faSortDown} />);
+			setSortYearIcon(<FontAwesomeIcon icon={faSortUp} />);
 			setSortTitleIcon(<FontAwesomeIcon icon={faSort} />);
 			setIsYearActive("activeYear");
 			setIsTitleActive("notActiveTitle");
@@ -97,16 +97,16 @@ function App() {
 
 	const showResults = [...movies]
 		.sort((a, b) => {
+			if (sortByTitle === "az") {
+				return a.Title > b.Title ? 1 : -1;
+			} else if (sortByTitle === "za") {
+				return a.Title > b.Title ? -1 : 1;
+			}
+
 			if (sortByYear === "newest") {
 				return a.Year > b.Year ? -1 : 1;
 			} else if (sortByYear === "oldest") {
 				return a.Year > b.Year ? 1 : -1;
-			}
-
-			if (sortByTitle === "az") {
-				return a.Title > b.Title;
-			} else if (sortByTitle === "za") {
-				return a.Title < b.Title;
 			}
 
 			return 0;
