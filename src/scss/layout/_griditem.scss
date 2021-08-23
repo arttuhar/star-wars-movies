@@ -3,10 +3,27 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	justify-content: center;
 
+	@media screen and (max-width: 768px) and (min-width: 0px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media screen and (max-width: 1024px) and (min-width: 769px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
 	.gridCard {
 		text-align: center;
 		padding: 0 10px;
 		margin: 20px 0;
+		max-width: 220px;
+
+		@media screen and (max-width: 480px) and (min-width: 0) {
+			max-width: 180px;
+		}
+
+		@media screen and (max-width: 768px) and (min-width: 481px) {
+			max-width: 200px;
+		}
 
 		.posterContainer {
 			.imdbLink {
@@ -16,6 +33,14 @@
 				.poster {
 					height: 320px;
 					width: 100%;
+
+					@media screen and (max-width: 480px) and (min-width: 0) {
+						height: 220px;
+					}
+
+					@media screen and (max-width: 768px) and (min-width: 481px) {
+						height: 260px;
+					}
 				}
 			}
 		}
