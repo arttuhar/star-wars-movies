@@ -234,7 +234,7 @@
   color: #fafafa;
   font-size: 1.2em;
   background-color: #222;
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
@@ -249,7 +249,64 @@
 .pagination .next .paginationPrevious,
 .pagination .previous .paginationNext,
 .pagination .previous .paginationPrevious {
+  width: 100%;
   outline: none;
+}
+
+.pagination .next .paginationNext .prevButtonSpan,
+.pagination .next .paginationPrevious .prevButtonSpan,
+.pagination .previous .paginationNext .prevButtonSpan,
+.pagination .previous .paginationPrevious .prevButtonSpan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination .next .paginationNext .prevButtonSpan .prevButtonIcon,
+.pagination .next .paginationPrevious .prevButtonSpan .prevButtonIcon,
+.pagination .previous .paginationNext .prevButtonSpan .prevButtonIcon,
+.pagination .previous .paginationPrevious .prevButtonSpan .prevButtonIcon {
+  justify-self: flex-start;
+}
+
+.pagination .next .paginationNext .prevButtonSpan .prevButtonText,
+.pagination .next .paginationPrevious .prevButtonSpan .prevButtonText,
+.pagination .previous .paginationNext .prevButtonSpan .prevButtonText,
+.pagination .previous .paginationPrevious .prevButtonSpan .prevButtonText {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.pagination .next .paginationNext .nextButtonSpan,
+.pagination .next .paginationPrevious .nextButtonSpan,
+.pagination .previous .paginationNext .nextButtonSpan,
+.pagination .previous .paginationPrevious .nextButtonSpan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination .next .paginationNext .nextButtonSpan .nextButtonText,
+.pagination .next .paginationPrevious .nextButtonSpan .nextButtonText,
+.pagination .previous .paginationNext .nextButtonSpan .nextButtonText,
+.pagination .previous .paginationPrevious .nextButtonSpan .nextButtonText {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.pagination .next .paginationNext .nextButtonSpan .nextButtonIcon,
+.pagination .next .paginationPrevious .nextButtonSpan .nextButtonIcon,
+.pagination .previous .paginationNext .nextButtonSpan .nextButtonIcon,
+.pagination .previous .paginationPrevious .nextButtonSpan .nextButtonIcon {
+  justify-self: flex-end;
 }
 
 .pagination .paginationActive a {

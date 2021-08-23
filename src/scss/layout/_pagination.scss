@@ -17,7 +17,7 @@
 		color: #fafafa;
 		font-size: 1.2em;
 		background-color: #222;
-		padding: 5px;
+		padding: 5px 10px;
 		cursor: pointer;
 
 		@media screen and (max-width: 480px) and (min-width: 0) {
@@ -26,7 +26,36 @@
 
 		.paginationNext,
 		.paginationPrevious {
+			width: 100%;
 			outline: none;
+
+			.prevButtonSpan {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				justify-content: center;
+
+				.prevButtonIcon {
+					justify-self: flex-start;
+				}
+
+				.prevButtonText {
+					justify-self: center;
+				}
+			}
+
+			.nextButtonSpan {
+				display: grid;
+				grid-template-columns: 1fr auto;
+				justify-content: center;
+
+				.nextButtonText {
+					justify-self: center;
+				}
+
+				.nextButtonIcon {
+					justify-self: flex-end;
+				}
+			}
 		}
 	}
 
