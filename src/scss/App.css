@@ -180,6 +180,7 @@
 .gridItem .gridCard .posterContainer .imdbLink .poster {
   height: 320px;
   width: 100%;
+  border: 1px solid #888;
 }
 
 @media screen and (max-width: 480px) and (min-width: 0) {
@@ -213,7 +214,7 @@
 
 @media screen and (max-width: 480px) and (min-width: 0) {
   .gridItem .gridCard .movieDetails {
-    height: 120px;
+    height: 80px;
   }
 }
 
@@ -256,7 +257,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: #fafafa;
-  font-size: 1.2em;
+  font-size: 1.3em;
   background-color: #222;
   padding: 5px 10px;
   cursor: pointer;
@@ -266,6 +267,7 @@
   .pagination .next,
   .pagination .previous {
     width: 100px;
+    font-size: 1em;
   }
 }
 

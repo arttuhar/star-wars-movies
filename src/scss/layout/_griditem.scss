@@ -41,6 +41,7 @@
 				.poster {
 					height: 320px;
 					width: 100%;
+					border: 1px solid #888;
 
 					@media screen and (max-width: 480px) and (min-width: 0) {
 						height: 420px;
@@ -66,7 +67,7 @@
 			padding: 10px;
 
 			@media screen and (max-width: 480px) and (min-width: 0) {
-				height: 120px;
+				height: 80px;
 			}
 
 			.movieYear {
