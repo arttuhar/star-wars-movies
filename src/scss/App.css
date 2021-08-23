@@ -252,19 +252,12 @@
   outline: none;
 }
 
-.pagination .next :hover,
-.pagination .previous :hover {
-  color: #eee;
-}
-
-.pagination .paginationPrevious a,
 .pagination .paginationActive a {
   outline: none;
   font-size: 2em;
 }
 
 @media screen and (max-width: 480px) and (min-width: 0) {
-  .pagination .paginationPrevious a,
   .pagination .paginationActive a {
     font-size: 1.5em;
   }

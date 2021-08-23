@@ -17,7 +17,6 @@ function Pagination(props) {
 				previousClassName={"previous"}
 				nextLinkClassName={"paginationNext"}
 				nextClassName={"next"}
-				disabledClassName={"paginationDisabled"}
 				activeClassName={"paginationActive"}
 			/>
 		</div>
