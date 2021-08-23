@@ -3,6 +3,10 @@
 	margin: 0 10px;
 	justify-content: flex-end;
 
+	@media screen and (max-width: 480px) and (min-width: 0) {
+		justify-content: center;
+	}
+
 	.sortHeading {
 		h3 {
 			text-transform: uppercase;

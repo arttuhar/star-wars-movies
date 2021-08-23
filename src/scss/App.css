@@ -30,6 +30,18 @@
   padding: 1em;
 }
 
+@media screen and (max-width: 480px) and (min-width: 0) {
+  .heading .headingText {
+    font-size: 2.2em;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .heading .headingText {
+    font-size: 2.6em;
+  }
+}
+
 .container .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +72,14 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (max-width: 480px) and (min-width: 0) {
+  .sort {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .sort .sortHeading h3 {
@@ -167,6 +187,12 @@
   padding: 10px;
 }
 
+@media screen and (max-width: 480px) and (min-width: 0) {
+  .gridItem .gridCard .movieDetails {
+    height: 120px;
+  }
+}
+
 .gridItem .gridCard .movieDetails .movieYear {
   color: #888;
   font-size: 1.1em;
@@ -212,6 +238,13 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 480px) and (min-width: 0) {
+  .pagination .next,
+  .pagination .previous {
+    width: 100px;
+  }
+}
+
 .pagination .next .paginationNext,
 .pagination .next .paginationPrevious,
 .pagination .previous .paginationNext,
@@ -228,6 +261,13 @@
 .pagination .paginationActive a {
   outline: none;
   font-size: 2em;
+}
+
+@media screen and (max-width: 480px) and (min-width: 0) {
+  .pagination .paginationPrevious a,
+  .pagination .paginationActive a {
+    font-size: 1.5em;
+  }
 }
 
 .App {
