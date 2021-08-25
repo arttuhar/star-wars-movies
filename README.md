@@ -1,4 +1,4 @@
-# Star wars films
+# Star Wars films
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/arttuhar/star-wars-movies?label=repository%20size)
 
@@ -10,8 +10,6 @@
 ## Description
 
 The main goal of the project was to create web application that displays a list of Star Wars movies from JSON. Application have pagination which allows user to browse the movies and sorting buttons with ability to organize movies by title or by year of production. Application is also cross-browser compatible and responsive.
-
----
 
 Main technologies:
 
