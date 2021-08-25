@@ -1,6 +1,6 @@
 .gridItem {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	justify-content: center;
 
 	@media screen and (max-width: 480px) and (min-width: 0px) {
@@ -8,7 +8,7 @@
 	}
 
 	@media screen and (max-width: 768px) and (min-width: 481px) {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.gridCard {
